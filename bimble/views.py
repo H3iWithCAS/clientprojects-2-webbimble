@@ -13,7 +13,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return redirect('children_list')
     return render(request, 'login.html')
 
 def blog(request):

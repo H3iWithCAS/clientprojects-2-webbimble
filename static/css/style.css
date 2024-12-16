@@ -1,0 +1,12 @@
+.navbar {
+    background-color: #ff3333;
+}
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+.content-wrapper {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}

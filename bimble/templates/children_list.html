@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-wrapper">
+    <h2 class="text-center mb-4">Children List</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Parent Name</th>
+                <th>Contact Number</th>
+                <th>Enrollment Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for child in children %}
+            <tr>
+                <td>{{ child.name }}</td>
+                <td>{{ child.age }}</td>
+                <td>{{ child.get_gender_display }}</td>
+                <td>{{ child.parent_name }}</td>
+                <td>{{ child.contact_number }}</td>
+                <td>{{ child.enrollment_date }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6" class="text-center">No children registered yet.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
